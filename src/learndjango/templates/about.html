@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<p>This is aboutpage</p>
+<h2>Developers</h2>
+<ul>
+{% for developer in developers %}
+    {% if developer == 'Vandyck' %}
+    <li>Boss {{ forloop.counter|add:68 }} - {{ developer }}</li>
+    {% else %}
+    <li>Developer {{ forloop.counter }} - {{ developer }}</li>
+    {% endif %}
+{% endfor %}
+</ul>
+{% endblock %}
